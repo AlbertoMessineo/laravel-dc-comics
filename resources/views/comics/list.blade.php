@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dc-comics</title>
-    @vite('resources/js/app.js')
+    <title>Lista DC</title>
 </head>
-
-<body class="text-center">
-    <h1>DC-COMICS! Con la principesca</h1>
-
+<body>
+    <h1>Elenco fumetti</h1>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
 </body>
-
 </html>
