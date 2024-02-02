@@ -9,9 +9,9 @@
 <body>
     <h1>Elenco fumetti</h1>
     <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        @foreach ($comics as $comic)
+            <li>{{ $comic->title }} - <a href="{{route('comics.show', $comic->id)}}">Torna alla home</a></li>   
+        @endforeach        
     </ul>
 </body>
 </html>
