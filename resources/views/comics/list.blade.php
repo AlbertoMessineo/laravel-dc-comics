@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista DC</title>
-</head>
+@extends('welcome')
+
 <body>
     <h1>Elenco fumetti</h1>
-    <ul>
+    <div class="container d-flex">
         @foreach ($comics as $comic)
-            <li>{{ $comic->title }} - <a href="{{route('comics.show', $comic->id)}}">Torna alla home</a></li>   
-        @endforeach        
-    </ul>
+            <div class="card m-5" style="width: 18rem;">
+                <img src={{ $comic->thumb}} class="card-img-top" alt="Img1">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $comic->title }}</h5>
+                    <p class="card-text"><a href="{{ route('comics.show', $comic->id) }}">View details</a></p>
+                    <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+            </div>
+            {{-- <li>{{ $comic->title }} - <a href="{{route('comics.show', $comic->id)}}">View details</a></li>    --}}
+        @endforeach
+    </div>
+
+    <a href="{{ route('comics.create') }}"> Aggiungi un fumetto alla collezione</a>
 </body>
+
 </html>

@@ -10,8 +10,6 @@
 </head>
 
 <body class="text-center">
-    <h1>DC-COMICS! Con la principesca</h1>
-
 </body>
 
 </html>

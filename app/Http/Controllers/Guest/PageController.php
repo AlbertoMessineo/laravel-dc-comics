@@ -23,7 +23,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -37,9 +37,11 @@ class PageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Comic $comic)
     {
-        return $id;
+        // $comic = Comic::find($id);
+
+        return view('comics.show', compact('comic'));
     }
 
     /**
